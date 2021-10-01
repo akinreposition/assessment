@@ -1,0 +1,114 @@
+@import '../../variables.scss';
+.navbar {
+  display: flex;
+  height: 65px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 100px;
+  @media (max-width: 850px) {
+    padding: 0 25px;
+    display: flex !important;
+    justify-content: space-between;
+    height: auto;
+  }
+  ul {
+    display: flex;
+    li {
+      list-style-type: none;
+    }
+  }
+  a {
+    color: var(--dark-color);
+    padding: 0.45rem;
+    margin: 0 0.25rem;
+    text-decoration: none;
+    &:hover,
+    :active {
+      color: var(--blue-color);
+    }
+    .welcome span {
+      margin-right: 0.6rem;
+    }
+  }
+  &-main {
+    display: flex;
+    width: 500px;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  &__items {
+    display: inline-block;
+    text-align: right;
+    padding-left: 200px;
+    margin-bottom: 20px;
+  }
+  &-natural {
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  &__text {
+    vertical-align: middle;
+    color: $secondary-black-one;
+    margin-left: auto;
+  }
+  &-button {
+    width: 160px;
+    height: 44px;
+    text-align: center;
+    margin-right: 30px;
+    background: $primary-purple-one;
+    border: 1px solid $primary-purple-one;
+    box-shadow: -2px 6.7px 10px $secondary-blue-one;
+    border-radius: 4.79508px;
+    color: $primary-white;
+  }
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.mobile-navigation {
+  height: 68px;
+  display: flex;
+  padding: 18px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mobile-navbar {
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translateX(-100%);
+  z-index: 20;
+  transition: transform 0.45s ease-in-out;
+  &.active {
+    transform: translateX(0);
+  }
+  > .navbar-text > ul {
+    display: flex;
+    flex-direction: column;
+    height: 35vh;
+    align-items: center;
+    justify-content: space-between;
+    li {
+      font-size: 48px;
+      text-align: center;
+    }
+  }
+  & .navbar-button {
+    margin-top: 30px;
+    width: 280px;
+    margin-right: 0;
+  }
+}

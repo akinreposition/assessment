@@ -1,0 +1,12 @@
+//mixins beginning
+@import './mixins/display';
+//mixins end
+@import './reset.scss';
+@import './variables.scss';
+@import './responsive/home.scss';
+@import './base/base.scss';
+@import './components/components.scss';
+@import './modules/module';
+@import './pages/Home.scss';
+@import './pages/404.scss';
+

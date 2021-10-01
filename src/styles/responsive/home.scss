@@ -1,0 +1,58 @@
+@import '../variables.scss';
+.hamburger,
+.hamburger:after,
+.hamburger:before {
+    width: 32px;
+    height: 2px;
+    background-color: $primary-purple-one;
+}
+
+.hamburger {
+    display: block;
+    position: relative;
+    float: right;
+    &:before {
+        content: '';
+        position: absolute;
+        background-color: $primary-purple-one;
+        top: -10px;
+        right: 0;
+    }
+    &:after {
+        content: '';
+        position: absolute;
+        background-color: $primary-purple-one;
+        top: 10px;
+        right: 0;
+    }
+}
+.contain {
+    height: 10vh;
+    width: 100%;
+    margin-top: 40px;
+    margin-right: 25px;
+}
+.hamburger-close {
+    @extend .hamburger;
+    height: 5px;
+    width: 40px;
+    &:before {
+        display: none;
+    }
+    &:after {
+        display: none;
+    }
+}
+@media (max-width: 500px) {
+    .home-cta_group {
+        width: 375px;
+        max-width: 100%;
+    }
+    .home-hero_select-service {
+        width: 80% !important;
+    }
+    .home-hero_Typography,
+    .home-hero_Typography-text {
+        padding-top: 0;
+    }
+}

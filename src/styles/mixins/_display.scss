@@ -1,0 +1,33 @@
+@mixin module-display-one($bg-color, $color) {
+    background-color: $bg-color;
+    color: $color;
+}
+
+@mixin font-style-generator-one($family, $size, $weight, $text-position) {
+    font-family: $family;
+    font-style: normal;
+    font-size: $size;
+    font-weight: $weight;
+    text-align: $text-position;
+}
+
+@mixin apply-image-style($width, $height, $mleft, $mtop) {
+    width: $width;
+    height: $height;
+    margin-left: $mleft;
+    margin-top: $mtop;
+}
+
+@mixin module-display-matrix($dis, $dir, $grow, $juscontent, $alignment, $columns, $rows) {
+    display: $dis;
+    @if ($dis=='flex') {
+        flex-direction: $dir;
+        flex-grow: $grow;
+        justify-content: $juscontent;
+        align-items: $alignment;
+    }
+    @if (dis=='grid') {
+        grid-template-columns: $columns;
+        grid-template-rows: $rows;
+    }
+}

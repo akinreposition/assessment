@@ -1,0 +1,13 @@
+.not-found {
+    @include module-display-matrix(flex, column, 2, baseline, center, null, null);
+    min-height: calc(100vh - 65px);
+}
+
+.not-found-50 {
+    height: 100%;
+}
+
+.image-404 {
+    width: 100%;
+    height: auto;
+}

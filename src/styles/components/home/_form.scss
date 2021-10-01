@@ -1,0 +1,83 @@
+@import '../../mixins/display';
+@import '../../variables.scss';
+.form-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 744px;
+    margin-top: 150px;
+    width: 100%;
+}
+
+.home-form {
+    background: $secondary-white-two;
+    width: 536px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    &_text {
+        width: 230px;        
+        padding-top: 60px;
+        margin-bottom: 35px;
+        @include font-style-generator-one(Manrope, 26px, bold, center);        
+        text-transform: uppercase;
+        color: $secondary-black-one;
+    }
+    &_main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 25px;
+    }
+    &_name {
+        justify-content: space-evenly;
+        width: 400px;
+        height: 50px;
+        padding: 15px;
+        border: 0.8px solid $secondary-white-three;        
+        border-radius: 9px;
+        margin-bottom: 15px;
+        font-family: 'Manrope';
+        outline: none;
+    }
+    &_phone {
+        @extend .home-form_name;
+    }
+    &_message {
+        @extend .home-form_name;
+        text-align: left;
+        margin-top: 15px;
+        width: 400px;
+        height: 250px;
+        padding: 15px;
+        border: 0.8px solid $secondary-white-three;
+        box-sizing: border-box;
+        border-radius: 9px;
+        outline: none;
+    }
+    &_button {
+        width: 300px;
+        height: 50px;
+        margin-top: 25px;
+        background: $primary-blue-one;
+        color: $secondary-white-three;
+        border: 0.8px solid $primary-blue-one;
+        outline: 0;
+        &:focus, &:active {
+            border: 0.8px solid $primary-white;
+            box-shadow: none;
+        }
+    }
+    @media (max-width: 500px) {
+        width: 100%;
+        &_text,
+        &_main,
+        &_name,
+        &_phone,
+        &_message {
+            width: 90%;
+        }
+    }
+}

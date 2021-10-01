@@ -1,0 +1,131 @@
+@import './styles/reset.scss';
+@import './styles/index.scss';
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&display=swap');
+
+/* Utilities */
+.container {
+  max-width: 1280px;
+  margin: auto;
+  overflow: hidden;
+  // overflow: scroll;
+  padding: 0 2rem;
+  &-header {
+    margin-top: 15px;
+    width: 100%;
+    line-height: 27px;
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: bold;
+    @include module-display-matrix(
+      flex,
+      row,
+      1,
+      space-between,
+      baseline,
+      null,
+      null
+    );
+  }
+  &-timer {
+    width: 277px;
+    height: 27px;
+    font-size: 14px;
+    text-transform: capitalize;
+    color: $secondary-red-one;
+  }
+  &-link {
+    @extend .container-timer;
+    color: $primary-purple-one;
+    text-align: right;
+    cursor: pointer;
+    transition: 0.3s ease-in 0.25s;
+    &:hover,
+    &:active {
+      text-decoration: underline;
+    }
+  }
+  &-lead {
+    width: 200px;
+    height: 27px;
+    padding-top: 45px;
+    font-weight: 500;
+    font-size: 18px;
+    text-transform: capitalize;
+    color: #333333;
+  }
+}
+
+.center-text {
+  text-align: center;
+}
+
+/* Center All */
+.all-center {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
+/* List */
+.list {
+  margin: 0.5rem 0;
+}
+
+.list li {
+  padding-bottom: 0.3rem;
+}
+
+
+input[type='submit'],
+button {
+  font: inherit;
+}
+
+
+
+/* Mobile Styles */
+
+  @media (max-width: 850px) {
+    .container {
+      overflow: scroll;
+    }
+    .hide-sm {
+      display: none;
+    }
+    .grid-2,
+    .grid-3,
+    .grid-4 {
+      grid-template-columns: 1fr;
+    }
+    /* Text Styles */
+    .x-large {
+      font-size: 3rem;
+    }
+    .large {
+      font-size: 2rem;
+    }
+    .lead {
+      font-size: 1rem;
+    }
+    /* Navbar */
+    .navbar {
+      display: block;
+      text-align: center;
+    }
+    .navbar ul {
+      text-align: center;
+      justify-content: center;
+    }
+    .grid-2_homePage {
+      grid-template-columns: 1fr;
+    }
+    .footer {
+      display: auto;
+    }
+  }

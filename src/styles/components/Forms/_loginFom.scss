@@ -1,0 +1,176 @@
+
+@import "../../variables.scss";
+.login {
+  height: calc(100vh - 65px);
+  overflow: hidden;
+  grid-gap: 0;
+  &-grid__white {
+    @include module-display-matrix(
+      flex,
+      column,
+      2,
+      flex-start,
+      flex-end,
+      null,
+      null
+    );
+    height: 100%;
+    background: $primary-white;
+    width: 100%;
+    padding: 30px 50px;
+  }
+  &-form {
+    @include module-display-matrix(
+      flex,
+      column,
+      0,
+      flex-end,
+      center,
+      null,
+      null
+    );
+    width: 100%;
+    @media (max-width: 500px) {
+      width: 100%;
+    }
+  }
+  &-AccountNull {
+    height: 14px;
+    margin-top: 43px;
+    font-family: Josefin Sans;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 14px;
+    text-transform: capitalize;
+    color: $primary-grey;
+  }
+  @media (max-width: 500px) {
+    &-grid__blue {
+      display: none;
+    }
+    &-grid__white {
+      width: 100vw;
+    }
+    &-AccountNull {
+      text-align: right;
+      margin-top: 0;
+      width: 100%;
+      margin-left: 20%;
+    }
+    &-grid__white {
+      padding: 15px;
+      & .accounts-signIn {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+}
+
+.forget-password {
+  width: auto;
+  height: 14px;
+  margin-top: 10px;
+  font-family: Josefin Sans;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: capitalize;
+  color: $primary-grey;
+  margin-left: 20rem;
+  @media (max-width: 850px) {
+    width: 100%;
+    margin-top: 35%;
+    margin-left: -80%;
+  }
+}
+
+.accounts-signIn {
+  align-self: center;
+  @include module-display-matrix(
+    flex,
+    row,
+    0,
+    space-between,
+    baseline,
+    null,
+    null
+  );
+  width: 50%;
+}
+
+.form-header {
+  width: 70%;
+  height: 49px;
+  margin-top: 10px;
+  margin-right: 150px;
+  font-family: Cardo;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 49px;
+  text-transform: capitalize;
+  color: $black;
+  align-self: center;
+  margin-bottom: 25px;
+  @media (max-width: 500px) {
+    font-size: 24px;
+    margin-left: 20%;
+    width: 100%;
+  }
+}
+
+.input-field {
+  position: relative;
+  width: 430px;
+  height: 54px;
+  border: 1px solid $primary-grey;
+  border-radius: 5px;
+  padding: 5px;
+  &:hover,
+  &:focus,
+  &:active {
+    border: 1px solid black;
+  }
+}
+
+.input-box {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  font-size: 1.125rem;
+  font-family: "Josefin Sans";
+  color: $primary-grey;
+  transition: 0.3s ease-in;
+  &:hover,
+  &:focus,
+  &:active {
+    border: none !important;
+  }
+}
+
+.input-field > label {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  font-family: Josefin Sans;
+  font-size: 1.125rem;
+  line-height: 18px;
+  text-transform: capitalize;
+  color: #807e7e;
+  pointer-events: none;
+  transition: 0.3s ease-in;
+}
+
+.input-field input:focus ~ label,
+.input-field input:valid ~ label {
+  top: 0%;
+  font-size: 1rem;
+  color: black;
+  background: #fff;
+  transform: translateY(-50%);
+}

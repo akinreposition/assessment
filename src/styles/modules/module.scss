@@ -1,0 +1,71 @@
+@import '../mixins/display';
+@import './box-model';
+@import './button';
+@import './grid';
+@import './text';
+.badge {
+    display: inline-block;
+    font-size: 0.8rem;
+    padding: 0.2rem 0.7rem;
+    text-align: center;
+    margin: 0.3rem;
+    background: var(--light-color);
+    color: #333;
+    border-radius: 5px;
+}
+
+.alert {
+    padding: 0.7rem;
+    margin: 1rem 0;
+    opacity: 0.9;
+    background: var(--light-color);
+    color: #333;
+}
+
+.btn-primary,
+.bg-primary,
+.badge-primary,
+.alert-primary {
+    @include module-display-one(var(--primary-color), #fff);
+}
+
+.btn-light,
+.bg-light,
+.badge-light,
+.alert-light {
+    @include module-display-one(var(--light-color), #333);
+}
+
+.btn-dark,
+.bg-dark,
+.badge-dark,
+.alert-dark {
+    @include module-display-one(var(--dark-color), #fff);
+}
+
+.btn-danger,
+.bg-danger,
+.badge-danger,
+.alert-danger {
+    @include module-display-one(var(--danger-color), #fff);
+}
+
+.btn-success,
+.bg-success,
+.badge-success,
+.alert-success {
+    @include module-display-one(var(--success-color), #fff);
+}
+
+.btn-white,
+.bg-white,
+.badge-white,
+.alert-white {
+    @include module-display-one(#fff, #333);
+    border: #ccc solid 1px;
+}
+
+.bg-light,
+.badge-light {
+    border: #ccc solid 1px;
+}

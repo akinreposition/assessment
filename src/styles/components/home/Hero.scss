@@ -1,0 +1,64 @@
+@import '../../mixins/display';
+@import '../../variables.scss';
+.home-hero {
+    width: auto;
+    height: 475px;
+    background-color: $primary-blue-one;
+  background-image: url('../../../assets/background-gradients.svg');
+  background-blend-mode: multiply;
+    &_Typography {
+        @include font-style-generator-one(inherit, 48px, 600, center);
+        text-align: center;
+        padding-top: 100px;
+        line-height: 66px;
+        text-transform: capitalize;
+        color: $primary-white;
+        @media (max-width: 500px) {
+            padding-top: 25px;
+        }
+        &-main {
+            @include font-style-generator-one(Manrope, 48px, 800, center);
+            line-height: 66px;
+            letter-spacing: 0em;
+            @media (max-width: 500px) {
+                font-size: 30px;
+            }
+        }
+        &-text {
+            @extend .home-hero_Typography;
+            padding-top: 0;
+            letter-spacing: 0em;
+        }
+    }
+    &_select-service {
+        justify-content: space-evenly;
+        /*width: 404px;
+        height: 45.8px;
+        padding: 10px;
+        background: #FFFFFF;
+        box-shadow: 0px 11px 23px $primary-blue-two;
+        border-radius: 8px;*/
+        width: 80%;
+        height: 100%;
+        border: none;
+        outline: none;
+        &:focus {
+            border: $primary-blue-two;
+        }
+    }
+    &_get-started {
+        width: 10.25rem;
+        height: 54px;
+        text-align: center;
+        // margin-left: 550px; 
+        margin: auto;
+        padding-bottom: 20px;
+        // margin-top: 23px;
+        background: $primary-blue-one;
+        border: 1px solid $primary-ash-two;
+        box-sizing: border-box;
+        box-shadow: -2.88px 6.71px 10.55px $primary-blue-one;
+        border-radius: 5px;
+        color: $primary-white;
+    }
+}

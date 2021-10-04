@@ -1,5 +1,6 @@
 import React from 'react'
-import { SignUp } from '../components/forms/SignUp'
+import Footer from '../components/footer/Footer'
+import HomeVideo from '../components/videos/HomeVideo'
 
 const Home = () => {
     return (
@@ -8,8 +9,9 @@ const Home = () => {
                 Welcome to Moonsmile Bank
             </header>
             <div className="section1 bg-purple">
-                <SignUp />
+                <HomeVideo />
             </div>
+            <Footer />
         </div>
     )
 }

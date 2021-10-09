@@ -5,6 +5,8 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 100px;
+  // background-image: url(../../../assets/images/amaoUnsplash.jpg);
+  border-bottom: #765;
   @media (max-width: 850px) {
     padding: 0 25px;
     display: flex !important;
@@ -57,11 +59,11 @@
     height: 44px;
     text-align: center;
     margin-right: 30px;
-    background: $primary-purple-one;
+    background: $primary-white;
     border: 1px solid $primary-purple-one;
     box-shadow: -2px 6.7px 10px $secondary-blue-one;
-    border-radius: 4.79508px;
-    color: $primary-white;
+    color: $primary-purple-one;
+    
   }
 }
 

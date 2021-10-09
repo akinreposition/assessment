@@ -57,7 +57,7 @@ export const SignUp = () => {
                 onChange={(e) => setFirstName(e.target.value)}
                 spellCheck="true"
               />
-              <label htmlFor="Full Name">First Name</label>
+              <label htmlFor="Full Name">Full Name</label>
             </div>
             <div className="input-field my-1">
               <input
@@ -127,8 +127,7 @@ export const SignUp = () => {
             <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
               <h3 className="checkmail">Check your mail </h3>
               <h5 className="checkmail-content">
-                A verification Link have been sent to your Email
-                {email}
+                A verification Link have been sent to { email}
               </h5>
             </Popup>
           </form>

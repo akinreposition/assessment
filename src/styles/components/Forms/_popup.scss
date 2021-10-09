@@ -1,4 +1,3 @@
-// Popup style
 
 .popup {
     position: fixed;
@@ -17,12 +16,13 @@
     position: relative;
     padding: 32px;
     width: 100%;
+    height: auto;
     max-width: 640px;
     background: #ffff;
 }
 
 .close-btn {
-    // content: 'x';
+    content: 'x';
     cursor: pointer;
     position: absolute;
     top: 16px;

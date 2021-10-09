@@ -1,17 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { Link, useHistory } from "react-router-dom";
-// import AutomainContext from "../../context/automain/automainContext";
 // import Popup from 'reactjs-popup';
 import Popup from "../Popup/Popup";
 import showPwdImg from "../../assets/svg/show-password.svg";
 import hidePwdImg from "../../assets/svg/hide-password.svg";
 
 export const SignUp = () => {
-  // const automainContext = useContext(AutomainContext);
-  // const alertContext = useContext(AlertContext);
-  const history = useHistory();
 
-  //   const { userSignUp } = automainContext;
+  const history = useHistory();
   const [full_name, setFirstName] = useState("");
   const [mobile_number, setMobile_number] = useState("");
   const [email, setEmail] = useState("");
@@ -29,15 +25,14 @@ export const SignUp = () => {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    //   const signUpData = {first_name,mobile_number,email, password1,password2}
-    //   userSignUp(signUpData);
+ 
     setTimeout(() => {
       history.push("/login");
     }, 5000);
   };
   return (
     <div>
-      <div className="card ba b--black-10 center">
+      <div className="">
         <div className="signin">
           <h6 className="signin-accountExists ">
             Already have an account

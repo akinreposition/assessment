@@ -36,6 +36,8 @@
   &-AccountNull {
     height: 14px;
     margin-top: 43px;
+    margin-right: 487px;
+    margin-bottom: 3%;
     font-family: Josefin Sans;
     font-weight: normal;
     font-size: 14px;
@@ -44,20 +46,18 @@
     color: $primary-grey;
   }
   @media (max-width: 500px) {
-    &-grid__blue {
-      display: none;
-    }
     &-grid__white {
       width: 100vw;
     }
     &-AccountNull {
-      text-align: right;
+      // text-align: right;
       margin-top: 0;
+      margin-bottom: 5%;
       width: 100%;
       margin-left: 20%;
     }
     &-grid__white {
-      padding: 15px;
+      padding: 10px;
       & .accounts-signIn {
         width: 100%;
         display: flex;

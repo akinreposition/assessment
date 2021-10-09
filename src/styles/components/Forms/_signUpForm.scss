@@ -24,7 +24,7 @@ $gen-width: 430px;
   }
   &-accountExists {
     margin-top: 33px;
-    margin-right: -230px;
+    margin-left: 230px;
     font-family: Josefin Sans;
     font-size: 14px;
     font-weight: normal;
@@ -91,7 +91,7 @@ $gen-width: 430px;
     }
     &-accountExists {
       margin-top: 0;
-      width: auto;
+      width: 100%;
     }
     &-grid__blue {
       display: none;

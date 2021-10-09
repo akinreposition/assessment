@@ -1,12 +1,9 @@
 import React, { useState, } from 'react'
 import { Link, useHistory } from 'react-router-dom'
-// import AutomainContext from '../../context/automain/automainContext'
 import showPwdImg from '../../assets/svg/show-password.svg';
 import hidePwdImg from '../../assets/svg/hide-password.svg';
 
 export const Login = () => {
-//   const automainContext = useContext(AutomainContext);
-//   const { userLogin } = automainContext;
 
   const [ email, setEmail] = useState ("");
   const [ password, setPassword] = useState ("");
@@ -15,8 +12,7 @@ export const Login = () => {
   const history = useHistory();
   const onSubmit = (e) => {
     e.preventDefault();
-    // const loginData = { email, password }
-    //   userLogin(loginData)
+  
       setTimeout(() => {
         history.push('/dashboard')
       }, 4000)
@@ -24,7 +20,7 @@ export const Login = () => {
   }
     return (
         <div style={{ marginTop: '50px'}}>
-          <div className="card ba b--black-10 center">
+          <div className="login">
             <div className='login-grid__white'>
               <h6 className='login-AccountNull'>
                 Don’t have an account
@@ -32,7 +28,7 @@ export const Login = () => {
                   <strong> Create Account</strong>
                 </Link>
               </h6>
-            <h3 className='form-header'>Welcome Back</h3>
+            
             <form className='login-form' autoComplete="true" onSubmit={onSubmit}>
               <div className='input-field my-1'>
                 <input 
